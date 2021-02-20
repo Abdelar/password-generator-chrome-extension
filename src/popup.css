@@ -1,0 +1,8 @@
+body {
+	min-width: 350px;
+	background-color: lightgray;
+}
+
+button[type='submit'] {
+	display: block;
+}

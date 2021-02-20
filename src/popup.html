@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="popup.css" />
+		<script src="https://cdn.jsdelivr.net/npm/@luanmuniz/password-generator@1.0.6/index.min.js"></script>
+	</head>
+	<body>
+		<h1>Password Generator</h1>
+		<form>
+			<label for="alphabets">Include Alphabets</label>
+			<input type="checkbox" name="alphabets" id="alphabets" checked disabled />
+			<br />
+			<label for="numbers">Include Numbers</label>
+			<input type="checkbox" name="numbers" id="numbers" />
+			<br />
+			<label for="symbols">Include Symbols</label>
+			<input type="checkbox" name="symbols" id="symbols" />
+			<br />
+			<label for="passwordLength">Length</label>
+			<input
+				type="range"
+				name="password length"
+				id="passwordLength"
+				min="8"
+				max="32"
+				step="1"
+				value="16"
+			/>
+			<span id="lengthValue"></span>
+			<br />
+			<button type="button" id="generate">Generate</button>
+		</form>
+		<textarea name="password" id="password" cols="30" rows="10"></textarea>
+		<button type="button" id="copy">Copy</button>
+	</body>
+	<script src="popup.js"></script>
+</html>

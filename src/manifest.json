@@ -1,0 +1,22 @@
+{
+	"name": "Password Generator",
+	"version": "1.0",
+	"description": "Generate Strong Passwords!",
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_title": "Password Generator",
+		"default_icon": {
+			"16": "images/logo.png",
+			"32": "images/logo.png",
+			"64": "images/logo.png",
+			"128": "images/logo.png"
+		}
+	},
+	"icons": {
+		"16": "images/logo.png",
+		"32": "images/logo.png",
+		"64": "images/logo.png",
+		"128": "images/logo.png"
+	},
+	"manifest_version": 2
+}
