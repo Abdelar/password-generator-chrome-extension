@@ -82,14 +82,18 @@ input {
 	cursor: auto;
 }
 
-.output button {
-	padding: 0.5em 1em;
-	border-radius: 2em;
-	background-color: white;
+#copy {
+	background: none;
 }
 
-.output button:hover {
-	background-color: lightgray;
+#copy svg {
+	color: white;
+	pointer-events: none;
+	height: 2em;
+}
+
+#copy:hover svg {
+	color: lightgray;
 }
 
 ::selection {
