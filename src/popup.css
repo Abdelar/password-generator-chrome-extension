@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	cursor: default;
 }
 
 *:focus {
@@ -78,6 +79,7 @@ input {
 	border: none;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	cursor: auto;
 }
 
 .output button {
@@ -91,5 +93,9 @@ input {
 }
 
 ::selection {
+	background-color: transparent;
+}
+
+.output textarea::selection {
 	background-color: rgba(173, 216, 230, 0.534);
 }
