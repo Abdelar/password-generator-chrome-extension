@@ -58,9 +58,14 @@ document
 // Register the event Listener of the copy functionality
 document.querySelector('#copy').addEventListener('click', copy);
 
+// Select the password when tabbed to
+document
+	.querySelector('#password')
+	.addEventListener('focus', event => event.target.select());
+
 // Update password function
 function updatePasswordArea() {
-	document.querySelector('textarea').value = generatePassword();
+	document.querySelector('#password').value = generatePassword();
 }
 
 // Generate password function
@@ -82,7 +87,7 @@ function shuffle(arr) {
 
 // Copy the actual password shown on the page to the clipboard
 function copy() {
-	document.querySelector('textarea').select();
+	document.querySelector('#password').select();
 	document.execCommand('copy');
 }
 
