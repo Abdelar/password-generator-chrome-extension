@@ -1,4 +1,4 @@
-// The global state for the web page
+// The global state of the web page
 const state = {
 	inputs: [
 		{
