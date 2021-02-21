@@ -70,6 +70,7 @@ input {
 	padding: 0.5em;
 	resize: none;
 	overflow: hidden;
+	font-family: inherit;
 }
 
 .output button {
