@@ -8,31 +8,48 @@
 	<body>
 		<h1>Password Generator</h1>
 		<form>
-			<label for="alphabets">Include Alphabets</label>
-			<input type="checkbox" name="alphabets" id="alphabets" checked disabled />
-			<br />
-			<label for="numbers">Include Numbers</label>
-			<input type="checkbox" name="numbers" id="numbers" />
-			<br />
-			<label for="symbols">Include Symbols</label>
-			<input type="checkbox" name="symbols" id="symbols" />
-			<br />
-			<label for="passwordLength">Length</label>
-			<input
-				type="range"
-				name="password length"
-				id="passwordLength"
-				min="8"
-				max="32"
-				step="1"
-				value="16"
-			/>
-			<span id="lengthValue"></span>
-			<br />
+			<p>
+				<label for="alphabets">Include Alphabets</label>
+				<input
+					type="checkbox"
+					name="alphabets"
+					id="alphabets"
+					checked
+					disabled
+				/>
+			</p>
+			<p>
+				<label for="numbers">Include Numbers</label>
+				<input type="checkbox" name="numbers" id="numbers" />
+			</p>
+			<p>
+				<label for="symbols">Include Symbols</label>
+				<input type="checkbox" name="symbols" id="symbols" />
+			</p>
+			<p>
+				<label for="passwordLength">Length</label>
+				<input
+					type="range"
+					name="password length"
+					id="passwordLength"
+					min="8"
+					max="32"
+					step="1"
+				/>
+				<span id="lengthValue"></span>
+			</p>
 			<button type="button" id="generate">Generate</button>
 		</form>
-		<textarea name="password" id="password" cols="30" rows="10"></textarea>
-		<button type="button" id="copy">Copy</button>
+		<div class="output">
+			<textarea
+				name="password"
+				id="password"
+				cols="30"
+				rows="1"
+				resizable="false"
+			></textarea>
+			<button type="button" id="copy">Copy</button>
+		</div>
 	</body>
 	<script src="popup.js"></script>
 </html>
