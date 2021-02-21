@@ -69,8 +69,10 @@ input {
 	flex: 1;
 	padding: 0.5em;
 	resize: none;
-	overflow: hidden;
 	font-family: inherit;
+	border: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .output button {
@@ -84,6 +86,5 @@ input {
 }
 
 ::selection {
-	background-color: lightblue;
-	background-color: rgb(198, 188, 255);
+	background-color: rgba(173, 216, 230, 0.534);
 }
