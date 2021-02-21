@@ -45,6 +45,11 @@ form p:hover {
 	outline: 1px solid #525252;
 }
 
+#lengthValue {
+	width: 7em;
+	text-align: right;
+}
+
 form label {
 	cursor: pointer;
 }

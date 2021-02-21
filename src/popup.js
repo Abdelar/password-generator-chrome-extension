@@ -78,5 +78,10 @@ function copy() {
 }
 
 function formatCharactersNumber(value) {
-	return value + ' Characters';
+	return (
+		Number(value).toLocaleString('en-US', {
+			minimumIntegerDigits: 2,
+			useGrouping: false,
+		}) + ' Characters'
+	);
 }
