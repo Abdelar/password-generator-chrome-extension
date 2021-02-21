@@ -36,7 +36,12 @@ h1 {
 form p {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 1em;
+	align-items: center;
+	padding: 0.5em;
+}
+
+form p:hover {
+	outline: 1px solid #525252;
 }
 
 form label {
