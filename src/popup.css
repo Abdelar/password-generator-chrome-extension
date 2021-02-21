@@ -21,6 +21,7 @@ body {
 button {
 	cursor: pointer;
 	font-family: inherit;
+	border: none;
 }
 
 h1 {
@@ -51,7 +52,6 @@ input {
 	margin: 1em 0 2em;
 	padding: 0.5em;
 	background-color: white;
-	border: none;
 	border-radius: 1em;
 }
 
@@ -77,8 +77,8 @@ input {
 
 .output button {
 	padding: 0.5em 1em;
-	border: none;
 	border-radius: 2em;
+	background-color: white;
 }
 
 .output button:hover {
