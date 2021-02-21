@@ -1,3 +1,4 @@
+// The global state for the web page
 const state = {
 	inputs: [
 		{
@@ -31,9 +32,11 @@ const state = {
 	symbols: '!@#$%^&*()+_-=}{[]|:;"/?.><,`~',
 };
 
+// Display the initial password length
 document.querySelector('#lengthValue').innerText = formatCharactersNumber(16);
 updatePasswordArea();
 
+// Register the event listeners of the inputs
 state.inputs.map(input => {
 	input.node = document.querySelector(input.selector);
 	input.node[input.parameter] = input.value;
@@ -47,16 +50,20 @@ state.inputs.map(input => {
 	});
 });
 
+// Generate a first password with the default settings
 document
 	.querySelector('#generate')
 	.addEventListener('click', updatePasswordArea);
 
+// Register the event Listener of the copy functionality
 document.querySelector('#copy').addEventListener('click', copy);
 
+// Update password function
 function updatePasswordArea() {
 	document.querySelector('textarea').value = generatePassword();
 }
 
+// Generate password function
 function generatePassword() {
 	let pool = state.lowercase + state.uppercase;
 	if (state.inputs[1].value) pool += state.numbers;
@@ -64,6 +71,7 @@ function generatePassword() {
 	return shuffle(pool.split('')).slice(0, state.inputs[3].value).join('');
 }
 
+// A helper function for shuffling a set of characters in an array
 function shuffle(arr) {
 	for (let i = arr.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
@@ -72,11 +80,13 @@ function shuffle(arr) {
 	return arr;
 }
 
+// Copy the actual password shown on the page to the clipboard
 function copy() {
 	document.querySelector('textarea').select();
 	document.execCommand('copy');
 }
 
+// A helper function to format the password length
 function formatCharactersNumber(value) {
 	return (
 		Number(value).toLocaleString('en-US', {
