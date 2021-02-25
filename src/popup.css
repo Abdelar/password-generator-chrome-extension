@@ -73,8 +73,6 @@ input {
 
 .output {
 	display: flex;
-	justify-content: space-between;
-	gap: 1em;
 }
 
 .output textarea {
@@ -85,21 +83,28 @@ input {
 	border: none;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	outline: none;
 	cursor: auto;
 }
 
 #copy {
-	background: none;
+	background: transparent;
+	border: 1px solid white;
+	display: flex;
+	align-items: center;
+	outline: none;
 }
 
 #copy svg {
 	color: white;
 	pointer-events: none;
 	height: 2em;
+	padding: 0.25em 0.35em;
 	transition: 0.3s color ease-in-out;
 }
 
-#copy:hover svg {
+#copy:hover svg,
+#copy:focus svg {
 	color: lightgray;
 }
 
