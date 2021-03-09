@@ -2,4 +2,4 @@
 
 > Generate **strong** passwords for your web accounts
 
-![screenshot](images/screenshot.png)
+![screenshot](screenshots/screenshot.png)
